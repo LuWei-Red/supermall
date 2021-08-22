@@ -6,7 +6,10 @@
    <home-swiper :banners="banners" />
    <recommend-view :recommends="recommends"/>
    <tab-control class="tab-control" :titles="['流行','新款','精选']"/>
-
+     <el-button @click="visible = true">Button</el-button>
+    <el-dialog :visible.sync="visible" title="Hello world">
+      <p>Try Element</p>
+    </el-dialog>
    <ul>
      <li>Duck1</li>
      <li>Duck2</li>
@@ -131,7 +134,8 @@ export default {
     return {
       result: null,
       banners: [],
-      recommends: []
+      recommends: [],
+      visible: false
     };
   },
   created() {
